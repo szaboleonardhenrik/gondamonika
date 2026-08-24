@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gonda Monika — Könyvelés és bérszámfejtés</title>
-  <meta name="description" content="Gonda Monika — teljes körű könyvelés, bérszámfejtés és adóügyi ügyintézés vállalkozásoknak és egyéni vállalkozóknak. Pontos határidők, érthető magyarázatok, naprakész jogszabály-követés.">
+  <title>Gonda Mónika — Könyvelés és bérszámfejtés</title>
+  <meta name="description" content="Gonda Mónika — teljes körű könyvelés, bérszámfejtés és adóügyi ügyintézés vállalkozásoknak és egyéni vállalkozóknak. Pontos határidők, érthető magyarázatok, naprakész jogszabály-követés.">
   <link rel="canonical" href="https://gondamonika.hu/">
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="hu_HU">
   <meta property="og:url" content="https://gondamonika.hu/">
-  <meta property="og:title" content="Gonda Monika — Könyvelés és bérszámfejtés">
+  <meta property="og:title" content="Gonda Mónika — Könyvelés és bérszámfejtés">
   <meta property="og:description" content="Teljes körű könyvelés, bérszámfejtés és adóügyi ügyintézés — pontos határidők, érthető magyarázatok.">
   <meta name="twitter:card" content="summary">
 
@@ -25,11 +25,11 @@
   {
     "@context": "https://schema.org",
     "@type": "AccountingService",
-    "name": "Gonda Monika — Könyvelés és bérszámfejtés",
+    "name": "Gonda Mónika — Könyvelés és bérszámfejtés",
     "url": "https://gondamonika.hu/",
     "description": "Teljes körű könyvelés, bérszámfejtés és adóügyi ügyintézés vállalkozásoknak.",
-    "telephone": "+36301234567",
-    "email": "info@gondamonika.hu",
+    "telephone": "+36304625292",
+    "email": "konyveles@gondamonika.hu",
     "areaServed": "Magyarország",
     "priceRange": "Ft"
   }
@@ -432,6 +432,18 @@
       background: var(--forest-50); border: 1px solid var(--forest-100); border-radius: 12px;
       padding: 14px 16px; font-size: 13px; color: var(--ink-soft); margin-bottom: 24px;
     }
+    .contact-card form { display: grid; gap: 16px; }
+    .contact-card label { font-size: 13px; font-weight: 600; color: var(--forest-950); display: grid; gap: 6px; }
+    .contact-card input, .contact-card select, .contact-card textarea {
+      font-family: inherit; font-size: 14.5px; color: var(--ink);
+      background: var(--cream); border: 1px solid var(--line); border-radius: 10px;
+      padding: 12px 14px; width: 100%; transition: border-color .15s, box-shadow .15s;
+    }
+    .contact-card input:focus, .contact-card select:focus, .contact-card textarea:focus {
+      outline: none; border-color: var(--forest-700); box-shadow: 0 0 0 3px rgba(29,86,66,.12);
+    }
+    .contact-card textarea { resize: vertical; }
+    .contact-card .hint { margin-bottom: 4px; }
 
     /* ── Lábléc ──────────────────────────────────── */
     footer { background: var(--forest-950); color: #8fae9f; padding: 56px 0 30px; font-size: 14px; }
@@ -478,13 +490,14 @@
   <div class="container nav">
     <a class="brand" href="#top">
       <span class="brand-mark">GM</span>
-      <span class="brand-name">Gonda Monika<small>Könyvelés · Bérszámfejtés</small></span>
+      <span class="brand-name">Gonda Mónika<small>Könyvelés · Bérszámfejtés</small></span>
     </a>
     <nav class="links">
       <a href="#szolgaltatasok">Szolgáltatások</a>
       <a href="#rolam">Rólam</a>
       <a href="#arak">Árak</a>
       <a href="#gyik">GYIK</a>
+      <a href="blog/">Blog</a>
       <a class="btn" href="#kapcsolat">Ajánlatkérés</a>
     </nav>
     <button class="burger" aria-label="Menü" aria-expanded="false" onclick="toggleMenu()">
@@ -497,6 +510,7 @@
   <a href="#rolam" onclick="toggleMenu()">Rólam</a>
   <a href="#arak" onclick="toggleMenu()">Árak</a>
   <a href="#gyik" onclick="toggleMenu()">GYIK</a>
+  <a href="blog/">Blog</a>
   <a href="#kapcsolat" onclick="toggleMenu()">Kapcsolat / ajánlatkérés</a>
 </div>
 
@@ -597,8 +611,7 @@
 <div class="statband">
   <div class="container">
     <div class="stats">
-      <!-- PLACEHOLDER számok — élesítés előtt valós adatokra cserélni! -->
-      <div class="stat reveal"><b><span class="count" data-to="10">0</span>+</b><span>év szakmai tapasztalat</span></div>
+      <div class="stat reveal"><b><span class="count" data-to="15">0</span>+</b><span>év szakmai tapasztalat</span></div>
       <div class="stat reveal d1"><b><span class="count" data-to="50">0</span>+</b><span>elégedett ügyfél</span></div>
       <div class="stat reveal d2"><b><span class="count" data-to="100">0</span>%</b><span>határidőre beadott bevallás</span></div>
       <div class="stat reveal d3"><b><span class="count" data-to="24">0</span>&nbsp;óra</b><span>válaszidő megkeresésekre</span></div>
@@ -610,20 +623,23 @@
   <div class="container about-grid">
     <div class="about-photo-wrap reveal">
       <div class="about-photo">[ Portréfotó helye —<br>gondamonika-portre.jpg ]</div>
-      <div class="about-badge"><b>Gonda Monika</b>mérlegképes könyvelő</div>
+      <div class="about-badge"><b>Gonda Mónika</b>mérlegképes könyvelő</div>
     </div>
     <div class="about-text">
       <div class="section-head reveal">
         <span class="kicker">Rólam</span>
         <h2>Nem csak könyvelek — partnerként gondolkodom</h2>
       </div>
-      <p class="reveal d1">Több éves tapasztalattal foglalkozom kis- és középvállalkozások könyvelésével
-        és bérszámfejtésével. Hiszek abban, hogy a jó könyvelő nem csak rögzít: időben szól,
-        érthetően magyaráz, és segít jól dönteni.</p>
-      <p class="reveal d2">Ügyfeleimmel hosszú távú, bizalmi kapcsolatra törekszem — a legkisebb egyéni
+      <p class="reveal d1">Több mint 15 éves szakmai tapasztalattal foglalkozom kis- és középvállalkozások
+        könyvelésével és bérszámfejtésével. Hiszek abban, hogy a jó könyvelő nem csak rögzít:
+        időben szól, érthetően magyaráz, és segít jól dönteni.</p>
+      <p class="reveal d2">Pályám során könyvvizsgálat mellett is dolgoztam, így pontosan tudom, mit néz
+        egy ellenőrzés — és úgy vezetem a könyvelést, hogy az bármikor megállja a helyét.
+        Ügyfeleimmel hosszú távú, bizalmi kapcsolatra törekszem — a legkisebb egyéni
         vállalkozástól a több tíz főt foglalkoztató cégekig.</p>
       <ul class="about-list reveal d3">
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Mérlegképes könyvelői végzettség, folyamatos továbbképzés</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Mérlegképes könyvelő, regisztrált könyvviteli szolgáltató (nyilvántartási szám: 213061)</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Könyvvizsgálói területen szerzett tapasztalat</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Teljesen elektronikus ügymenet — nincs papírtologatás</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Közvetlen elérhetőség: velem beszél, nem egy ügyfélszolgálattal</li>
       </ul>
@@ -656,26 +672,28 @@
     <div class="section-head center reveal">
       <span class="kicker">Vélemények</span>
       <h2>Akik már ránk bízták a számaikat</h2>
-      <p><!-- PLACEHOLDER vélemények — élesítés előtt valós ügyfél-visszajelzésekre cserélni! --></p>
     </div>
     <div class="quotes">
       <div class="quote reveal">
         <span class="starrow">★★★★★</span>
-        <p>„Végre egy könyvelő, aki nem szakzsargonban beszél. Minden hónapban pontosan
-          tudom, mire számítsak — adóban és költségben is."</p>
-        <div class="who"><span class="av">KP</span><div><b>Kovács Péter</b><span>ügyvezető, szolgáltató kft. (minta)</span></div></div>
+        <p>„Egy több száz diákot foglalkoztató szervezetnél a pontosság nem opció, hanem
+          alapfeltétel. Mónika évek óta hibátlanul, határidőre dolgozik — és amikor kérdés
+          van, érthető választ kapunk, nem paragrafusokat."</p>
+        <div class="who"><span class="av">YA</span><div><b>Yilmaz Attila</b><span>Tudatos Diák Iskolaszövetkezet</span></div></div>
       </div>
       <div class="quote reveal d1">
         <span class="starrow">★★★★★</span>
-        <p>„Az átállás a korábbi könyvelőnktől teljesen zökkenőmentes volt, mindent
-          Monika intézett. Azóta egyetlen határidőt sem csúsztunk."</p>
-        <div class="who"><span class="av">SzA</span><div><b>Szabó Andrea</b><span>egyéni vállalkozó (minta)</span></div></div>
+        <p>„Gyorsan növekvő cégnél a számoknak azonnal és pontosan kell rendelkezésre
+          állniuk. Mónika nemcsak könyvel: előre jelez, javaslatot tesz, és minden
+          döntésünk mögé odateszi a pénzügyi hátteret."</p>
+        <div class="who"><span class="av">SzL</span><div><b>Szabó Leonárd</b><span>T-DIGITAL</span></div></div>
       </div>
       <div class="quote reveal d2">
         <span class="starrow">★★★★★</span>
-        <p>„A bérszámfejtés korábban állandó stressz volt. Most minden hónapban időben,
-          hibátlanul megvan — a kollégák is elégedettek."</p>
-        <div class="who"><span class="av">NG</span><div><b>Nagy Gábor</b><span>ügyvezető, kereskedelmi bt. (minta)</span></div></div>
+        <p>„A bérszámfejtés és a bevallások korábban rengeteg időnket vitték el. Amióta
+          Mónika viszi, minden határidőre megvan, és a NAV-ügyintézést is teljesen
+          leveszi a vállunkról."</p>
+        <div class="who"><span class="av">GA</span><div><b>Galgóczi Anna</b><span>T-Cloud Kft.</span></div></div>
       </div>
     </div>
   </div>
@@ -689,12 +707,11 @@
       <p>Nincs rejtett költség: az ajánlatban rögzített díj pontosan azt fedi, amiben megállapodunk.</p>
     </div>
     <div class="plans">
-      <!-- PLACEHOLDER árak — élesítés előtt valós díjakra cserélni! -->
       <div class="plan reveal">
         <h3>Egyéni vállalkozó</h3>
         <span class="for">Átalányadó / tételes költségelszámolás</span>
-        <div class="price">15&nbsp;000&nbsp;Ft<small>-tól / hó</small></div>
-        <span class="note">minta ár — a végleges díj ajánlat alapján</span>
+        <div class="price">Fix havidíj<small> — ajánlat alapján</small></div>
+        <span class="note">a bizonylatszámhoz és az adózási formához igazítva</span>
         <ul>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Nyilvántartások vezetése</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Járulék- és szja-bevallások</li>
@@ -707,8 +724,8 @@
         <span class="tag">Legnépszerűbb</span>
         <h3>Kisvállalkozás</h3>
         <span class="for">Kft. / bt., néhány munkavállalóval</span>
-        <div class="price">45&nbsp;000&nbsp;Ft<small>-tól / hó</small></div>
-        <span class="note">minta ár — a végleges díj ajánlat alapján</span>
+        <div class="price">Fix havidíj<small> — ajánlat alapján</small></div>
+        <span class="note">a bizonylatszámhoz és a létszámhoz igazítva</span>
         <ul>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Kettős könyvvitel, főkönyv</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Bérszámfejtés (pár fő)</li>
@@ -732,8 +749,8 @@
         <a class="btn btn-ghost" href="#kapcsolat">Ajánlatot kérek</a>
       </div>
     </div>
-    <p class="pricing-note">A feltüntetett árak tájékoztató jellegűek — a pontos díj a bizonylatszámtól,
-      a létszámtól és az adózási formától függ. Kérjen személyre szabott ajánlatot!</p>
+    <p class="pricing-note">A pontos díj a bizonylatszámtól, a létszámtól és az adózási formától függ —
+      kérjen személyre szabott ajánlatot, 24 órán belül válaszolok.</p>
   </div>
 </section>
 
@@ -793,7 +810,7 @@
       </div>
       <div class="btns">
         <a class="btn btn-gold" href="#kapcsolat">Ajánlatot kérek <span class="arr">→</span></a>
-        <a class="btn btn-light" href="tel:+36301234567">Inkább telefonálok</a>
+        <a class="btn btn-light" href="tel:+36304625292">Inkább telefonálok</a>
       </div>
     </div>
   </div>
@@ -811,15 +828,15 @@
         <!-- PLACEHOLDER ADATOK — élesítés előtt cserélni! -->
         <li>
           <span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-          <div><b>Telefon</b><a href="tel:+36301234567">+36 30 123 4567</a></div>
+          <div><b>Telefon</b><a href="tel:+36304625292">+36 30 462 5292</a></div>
         </li>
         <li>
           <span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-          <div><b>E-mail</b><a href="mailto:info@gondamonika.hu">info@gondamonika.hu</a></div>
+          <div><b>E-mail</b><a href="mailto:konyveles@gondamonika.hu">konyveles@gondamonika.hu</a></div>
         </li>
         <li>
-          <span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <div><b>Iroda</b><span>1000 Budapest, Minta utca 1. <em>(placeholder)</em></span></div>
+          <span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+          <div><b>Ügyintézés</b><span>Teljesen online — az ország egész területéről</span></div>
         </li>
         <li>
           <span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
@@ -828,14 +845,41 @@
       </ul>
       <div class="contact-card reveal d2">
         <h3>Ajánlatkérés</h3>
-        <p>A gyors és pontos ajánlathoz ennyit írjon meg röviden:</p>
-        <div class="row"><b>1 · Cégforma</b> kft., bt., egyéni vállalkozás — és az adózási forma, ha ismert</div>
-        <div class="row"><b>2 · Méret</b> kb. havi bizonylatszám és a munkavállalók száma</div>
-        <div class="row"><b>3 · Igény</b> könyvelés, bérszámfejtés vagy mindkettő</div>
-        <div class="hint">💡 Ha most vált könyvelőt, azt is írja meg — az átállást teljes egészében én intézem.</div>
-        <a class="btn" href="mailto:info@gondamonika.hu?subject=Ajánlatkérés%20—%20gondamonika.hu">
-          Ajánlatot kérek e-mailben <span class="arr">→</span>
-        </a>
+        <p>Töltse ki az alábbi űrlapot — a „Küldés" gomb a levelezőprogramjában nyitja meg
+          a kész, előre kitöltött e-mailt, csak el kell küldenie.</p>
+        <form id="ajanlat-form" onsubmit="return sendOffer(event)">
+          <label>Név / cégnév
+            <input type="text" name="nev" required placeholder="pl. Minta Kft.">
+          </label>
+          <label>Cégforma és adózási forma
+            <select name="cegforma" required>
+              <option value="" disabled selected>Válasszon…</option>
+              <option>Egyéni vállalkozó — átalányadó</option>
+              <option>Egyéni vállalkozó — tételes költségelszámolás</option>
+              <option>Kft.</option>
+              <option>Bt.</option>
+              <option>KIVA-alany cég</option>
+              <option>Még nem indult el a vállalkozás</option>
+              <option>Egyéb / nem tudom</option>
+            </select>
+          </label>
+          <label>Mire kér ajánlatot?
+            <select name="igeny" required>
+              <option value="" disabled selected>Válasszon…</option>
+              <option>Könyvelés</option>
+              <option>Bérszámfejtés</option>
+              <option>Könyvelés + bérszámfejtés</option>
+              <option>Vállalkozásindítás, tanácsadás</option>
+            </select>
+          </label>
+          <label>Röviden a vállalkozásról
+            <textarea name="uzenet" rows="3" placeholder="kb. havi bizonylatszám, munkavállalók száma, jelenleg van-e könyvelője…"></textarea>
+          </label>
+          <div class="hint">💡 Ha most vált könyvelőt, azt is írja meg — az átállást teljes egészében én intézem.</div>
+          <button class="btn" type="submit" style="width:100%; justify-content:center;">
+            Ajánlatot kérek <span class="arr">→</span>
+          </button>
+        </form>
       </div>
     </div>
   </div>
@@ -845,7 +889,7 @@
   <div class="container">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand"><span class="brand-mark">GM</span><b>Gonda Monika</b></div>
+        <div class="foot-brand"><span class="brand-mark">GM</span><b>Gonda Mónika</b></div>
         <p>Teljes körű könyvelés, bérszámfejtés és adóügyi ügyintézés vállalkozásoknak —
           pontosan, érthetően, határidőre.</p>
       </div>
@@ -856,20 +900,21 @@
           <li><a href="#rolam">Rólam</a></li>
           <li><a href="#arak">Árak</a></li>
           <li><a href="#gyik">GYIK</a></li>
+          <li><a href="blog/">Blog</a></li>
           <li><a href="#kapcsolat">Kapcsolat</a></li>
         </ul>
       </div>
       <div>
         <h4>Elérhetőség</h4>
         <ul>
-          <li><a href="tel:+36301234567">+36 30 123 4567</a></li>
-          <li><a href="mailto:info@gondamonika.hu">info@gondamonika.hu</a></li>
+          <li><a href="tel:+36304625292">+36 30 462 5292</a></li>
+          <li><a href="mailto:konyveles@gondamonika.hu">konyveles@gondamonika.hu</a></li>
           <li><a href="adatvedelem.html">Adatkezelési tájékoztató</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="ev">2026</span> Gonda Monika — Könyvelés és bérszámfejtés. Minden jog fenntartva.</span>
+      <span>© <span id="ev">2026</span> Gonda Mónika — Könyvelés és bérszámfejtés. Minden jog fenntartva.</span>
       <span><a href="#top">Vissza a tetejére ↑</a></span>
     </div>
   </div>
@@ -910,6 +955,21 @@
     });
   }, { threshold: 0.4 });
   document.querySelectorAll('.count').forEach(el => cio.observe(el));
+
+  // Ajánlatkérő űrlap → előre kitöltött e-mail a levelezőben
+  function sendOffer(e) {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const body =
+      'Név / cégnév: ' + f.get('nev') + '\n' +
+      'Cégforma, adózási forma: ' + f.get('cegforma') + '\n' +
+      'Igény: ' + f.get('igeny') + '\n\n' +
+      (f.get('uzenet') || '');
+    location.href = 'mailto:konyveles@gondamonika.hu'
+      + '?subject=' + encodeURIComponent('Ajánlatkérés — gondamonika.hu — ' + f.get('nev'))
+      + '&body=' + encodeURIComponent(body);
+    return false;
+  }
 </script>
 
 </body>

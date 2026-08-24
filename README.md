@@ -21,12 +21,26 @@ fájlja tartalmazza), az „Enforce HTTPS" a tanúsítvány kiállítása után 
 
 ## Teendők élesítés előtt
 
-- [ ] Placeholder elérhetőségek cseréje (telefon, e-mail, cím) az `index.html`-ben + JSON-LD-ben
+- [x] Elérhetőségek: telefon +36 30 462 5292, e-mail konyveles@gondamonika.hu (2026-08-24)
+- [x] Vélemények: Tudatos Diák / T-DIGITAL / T-Cloud Kft. (2026-08-24)
+- [x] Árak: konkrét összegek helyett ajánlat-alapú csomagok (2026-08-24)
+- [x] `adatvedelem.html` kitöltve a hivatalos EV-adatokkal (2026-08-24)
+- [x] Blog: 3 SEO-cikk a `blog/` alatt, sitemap bővítve (2026-08-24)
+- [x] DNS-rekordok felvíve a Rackhostnál (2026-08-24)
 - [ ] Portréfotó a Rólam szekcióba (`gondamonika-portre.jpg`)
-- [ ] Statisztikák (év tapasztalat, ügyfélszám) valós adatokra igazítása
-- [ ] Árak szekció: minta-havidíjak valós díjakra cserélése (vagy árak elrejtése)
-- [ ] Vélemények: minta-idézetek valós ügyfél-visszajelzésekre cserélése
-- [ ] `adatvedelem.html` véglegesítése (adatkezelő adatai, adószám, nyilvántartási szám)
-- [ ] `info@gondamonika.hu` postafiók létrehozása (Rackhost) + SPF/DKIM/MX rekordok
-- [ ] DNS-rekordok felvitele a Rackhostnál (fenti táblázat), utána Enforce HTTPS a GitHub-on
+- [ ] `konyveles@gondamonika.hu` postafiók létrehozása + MX/SPF rekordok (leírás lent)
+- [ ] Enforce HTTPS bekapcsolása a GitHub Pages-en, ha a DNS-check lefutott
 - [ ] Google Search Console felvétel + sitemap beküldés; Google Cégprofil (Business Profile)
+- [ ] Vélemény-szövegek jóváhagyatása a nevesített személyekkel (Yilmaz A., Szabó L., Galgóczi A.)
+
+## E-mail (konyveles@gondamonika.hu) — beállítás
+
+A weboldal a GitHub-on van, a levelezéshez KÜLÖN e-mail szolgáltatás kell:
+
+1. Rackhost admin → e-mail képes szolgáltatás a domainhez (webtárhely vagy önálló
+   e-mail tárhely csomag), azon belül postafiók: `konyveles@gondamonika.hu`.
+2. A DNS-zónába (ugyanott, ahol az A-rekordok vannak) a Rackhost által megadott
+   **MX rekord(ok)** + **SPF TXT** rekord felvétele. (Rackhost tárhelynél ezeket
+   gyakran automatikusan felajánlja/beszúrja a szolgáltatás aktiválásakor.)
+3. Alternatíva fiók nélkül: e-mail *átirányítás* a gm.konyvelo@gmail.com címre,
+   és a Gmailben „Küldés másként" beállítása a konyveles@ címmel.
