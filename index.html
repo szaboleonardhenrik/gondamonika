@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gonda Monika — Könyvelés és bérszámfejtés</title>
+  <meta name="description" content="Gonda Monika — könyvelés, bérszámfejtés és teljes körű adóügyi ügyintézés vállalkozásoknak és egyéni vállalkozóknak. Pontos, megbízható, naprakész.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231b4d3e'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Georgia'>GM</text></svg>">
+  <style>
+    :root {
+      --green-950: #10332a;
+      --green-900: #1b4d3e;
+      --green-700: #2d6a54;
+      --green-100: #e3efe9;
+      --green-50: #f2f8f5;
+      --gold: #c9a227;
+      --ink: #1d2523;
+      --ink-soft: #4c5a55;
+      --paper: #ffffff;
+      --line: #dde7e2;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; line-height: 1.15; color: var(--green-950); }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--green-900); color: #fff;
+      display: grid; place-items: center;
+      font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 15px;
+    }
+    .brand-name { font-weight: 700; font-size: 17px; letter-spacing: -.01em; }
+    .brand-name small { display: block; font-weight: 500; font-size: 11.5px; color: var(--ink-soft); letter-spacing: .02em; }
+    nav.links { display: flex; gap: 28px; align-items: center; }
+    nav.links a { text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--ink-soft); transition: color .15s; }
+    nav.links a:hover { color: var(--green-900); }
+    .btn {
+      display: inline-block; padding: 11px 22px; border-radius: 10px;
+      background: var(--green-900); color: #fff !important;
+      text-decoration: none; font-weight: 600; font-size: 14.5px;
+      transition: background .15s, transform .15s;
+    }
+    .btn:hover { background: var(--green-700); transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--green-900) !important;
+      border: 1.5px solid var(--green-900);
+    }
+    .btn-ghost:hover { background: var(--green-50); }
+
+    /* Hero */
+    .hero { background: linear-gradient(180deg, var(--green-50) 0%, #fff 100%); padding: 88px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 56px; align-items: center; }
+    .eyebrow {
+      display: inline-block; font-size: 12.5px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--green-700);
+      background: var(--green-100); padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+    }
+    .hero h1 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 20px; }
+    .hero p.lead { font-size: 18px; color: var(--ink-soft); max-width: 52ch; margin-bottom: 32px; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 18px;
+      padding: 30px; box-shadow: 0 18px 40px -18px rgba(16,51,42,.18);
+    }
+    .hero-card h3 { font-size: 17px; margin-bottom: 16px; }
+    .hero-card ul { list-style: none; display: grid; gap: 12px; }
+    .hero-card li { display: flex; gap: 10px; font-size: 14.5px; color: var(--ink-soft); }
+    .hero-card li::before { content: "✓"; color: var(--gold); font-weight: 700; }
+
+    /* Sections */
+    section { padding: 76px 0; }
+    .section-head { max-width: 640px; margin-bottom: 44px; }
+    .section-head h2 { font-size: clamp(26px, 3.5vw, 36px); margin-bottom: 12px; }
+    .section-head p { color: var(--ink-soft); font-size: 16.5px; }
+
+    /* Services */
+    .services { background: #fff; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card {
+      border: 1px solid var(--line); border-radius: 16px; padding: 28px;
+      background: #fff; transition: box-shadow .2s, transform .2s;
+    }
+    .card:hover { box-shadow: 0 14px 30px -16px rgba(16,51,42,.22); transform: translateY(-3px); }
+    .card .icon {
+      width: 46px; height: 46px; border-radius: 12px; background: var(--green-100);
+      display: grid; place-items: center; font-size: 21px; margin-bottom: 18px;
+    }
+    .card h3 { font-size: 18px; margin-bottom: 10px; }
+    .card p { font-size: 14.5px; color: var(--ink-soft); }
+
+    /* About */
+    .about { background: var(--green-950); color: #e8f0ec; }
+    .about .section-head h2, .about h3 { color: #fff; }
+    .about .section-head p { color: #b9cdc4; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .about-photo {
+      aspect-ratio: 4/5; border-radius: 18px; background: var(--green-900);
+      display: grid; place-items: center; color: #7fa294; font-size: 15px;
+      border: 1px dashed #3d6b59; text-align: center; padding: 20px;
+    }
+    .about p { color: #c4d6cd; margin-bottom: 16px; font-size: 15.5px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .stat { border: 1px solid #2e5c4b; border-radius: 14px; padding: 18px 16px; text-align: center; }
+    .stat b { display: block; font-family: 'Fraunces', Georgia, serif; font-size: 26px; color: var(--gold); }
+    .stat span { font-size: 12.5px; color: #a7bfb4; }
+
+    /* Steps */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; counter-reset: step; }
+    .step { border-left: 3px solid var(--green-100); padding: 4px 0 4px 22px; }
+    .step::before {
+      counter-increment: step; content: "0" counter(step);
+      font-family: 'Fraunces', Georgia, serif; font-size: 30px; font-weight: 700;
+      color: var(--green-100); display: block; margin-bottom: 6px;
+    }
+    .step h3 { font-size: 16.5px; margin-bottom: 8px; }
+    .step p { font-size: 14px; color: var(--ink-soft); }
+
+    /* Contact */
+    .contact { background: var(--green-50); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .contact-list { list-style: none; display: grid; gap: 18px; margin-top: 8px; }
+    .contact-list li { display: flex; gap: 14px; align-items: flex-start; }
+    .contact-list .ci {
+      width: 42px; height: 42px; border-radius: 11px; background: #fff;
+      border: 1px solid var(--line); display: grid; place-items: center; font-size: 18px; flex-shrink: 0;
+    }
+    .contact-list b { display: block; font-size: 14px; }
+    .contact-list span, .contact-list a { font-size: 14.5px; color: var(--ink-soft); }
+    .contact-note {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px;
+    }
+    .contact-note h3 { font-size: 18px; margin-bottom: 12px; }
+    .contact-note p { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 20px; }
+
+    /* Footer */
+    footer { background: var(--green-950); color: #9db5ab; padding: 34px 0; font-size: 13.5px; }
+    .foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    footer a { color: #c4d6cd; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 820px) {
+      nav.links a:not(.btn) { display: none; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding: 56px 0 48px; }
+      section { padding: 56px 0; }
+      .about-photo { max-width: 380px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">GM</span>
+      <span class="brand-name">Gonda Monika<small>Könyvelés · Bérszámfejtés</small></span>
+    </a>
+    <nav class="links">
+      <a href="#szolgaltatasok">Szolgáltatások</a>
+      <a href="#rolam">Rólam</a>
+      <a href="#folyamat">Hogyan dolgozom</a>
+      <a class="btn" href="#kapcsolat">Kapcsolat</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Könyvelés · Bérszámfejtés · Adóügyek</span>
+      <h1>Számok, amikre nyugodtan építheti a vállalkozását</h1>
+      <p class="lead">Teljes körű könyvelés és bérszámfejtés kis- és középvállalkozásoknak,
+        egyéni vállalkozóknak. Pontos határidők, érthető magyarázatok, naprakész
+        jogszabály-követés — hogy Ön a vállalkozásával foglalkozhasson.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#kapcsolat">Kérjen ajánlatot</a>
+        <a class="btn btn-ghost" href="#szolgaltatasok">Szolgáltatások</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Miért érdemes velem dolgozni?</h3>
+      <ul>
+        <li>Határidők betartása, nulla NAV-mulasztás</li>
+        <li>Érthető, magyar nyelvű pénzügyi összefoglalók</li>
+        <li>Elektronikus ügyintézés — nincs papírtologatás</li>
+        <li>Személyre szabott, átlátható díjazás</li>
+        <li>Gyors válaszidő, közvetlen elérhetőség</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="szolgaltatasok">
+  <div class="container">
+    <div class="section-head">
+      <h2>Szolgáltatások</h2>
+      <p>Mindent egy kézből: a könyveléstől a bérszámfejtésen át a hatósági ügyintézésig.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📒</div>
+        <h3>Teljes körű könyvelés</h3>
+        <p>Kettős könyvvitel és egyszerűsített nyilvántartások kft.-knek, bt.-knek és
+          egyéni vállalkozóknak — bizonylatfeldolgozás, főkönyv, beszámolókészítés.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🧾</div>
+        <h3>Bérszámfejtés</h3>
+        <p>Munkabérek, járulékok, szabadság- és távolléti díjak pontos számfejtése,
+          be- és kijelentések, igazolások kiállítása.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏛️</div>
+        <h3>Adóbevallások, NAV-ügyintézés</h3>
+        <p>Havi, negyedéves és éves bevallások határidőre, elektronikus kapcsolattartás
+          a NAV-val és az önkormányzatokkal, képviselet ellenőrzés esetén.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🚀</div>
+        <h3>Vállalkozásindítás</h3>
+        <p>Segítség cégalapításnál és egyéni vállalkozás indításánál: adózási forma
+          kiválasztása (átalányadó, KATA, tételes költségelszámolás), bejelentések.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Pénzügyi riportok</h3>
+        <p>Rendszeres, közérthető kimutatások az eredményről, a cash-flow-ról és a
+          várható adófizetési kötelezettségekről — meglepetések nélkül.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>Tanácsadás</h3>
+        <p>Adóoptimalizálási és munkaügyi kérdések, jogszabályváltozások követése,
+          döntés-előkészítés — hogy mindig időben tudjon jól dönteni.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="rolam">
+  <div class="container about-grid">
+    <div class="about-photo">
+      [ Portréfotó helye —<br>gondamonika-portre.jpg ]
+    </div>
+    <div>
+      <div class="section-head">
+        <h2>Rólam</h2>
+        <p>Gonda Monika — mérlegképes könyvelő</p>
+      </div>
+      <p>Több éves tapasztalattal foglalkozom kis- és középvállalkozások könyvelésével
+        és bérszámfejtésével. Hiszek abban, hogy a jó könyvelő nem csak rögzít, hanem
+        partner: időben szól, érthetően magyaráz, és segít jól dönteni.</p>
+      <p>Ügyfeleimmel hosszú távú, bizalmi kapcsolatra törekszem — a legkisebb egyéni
+        vállalkozástól a több tíz főt foglalkoztató cégekig.</p>
+      <div class="stats">
+        <div class="stat"><b>10+</b><span>év tapasztalat</span></div>
+        <div class="stat"><b>50+</b><span>elégedett ügyfél</span></div>
+        <div class="stat"><b>100%</b><span>határidő-tartás</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="folyamat">
+  <div class="container">
+    <div class="section-head">
+      <h2>Hogyan dolgozom?</h2>
+      <p>Egyszerű, átlátható folyamat az első megkereséstől a folyamatos együttműködésig.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <h3>Ismerkedés</h3>
+        <p>Ingyenes egyeztetés: megismerem a vállalkozását, az adózási formáját és az igényeit.</p>
+      </div>
+      <div class="step">
+        <h3>Ajánlat</h3>
+        <p>Személyre szabott, fix díjas ajánlatot adok — rejtett költségek nélkül.</p>
+      </div>
+      <div class="step">
+        <h3>Átállás</h3>
+        <p>Az előző könyvelőtől való átvételt teljes egészében intézem, Önnek nincs vele dolga.</p>
+      </div>
+      <div class="step">
+        <h3>Folyamatos munka</h3>
+        <p>Havi zárás, bérszámfejtés, bevallások — és rendszeres, érthető tájékoztatás.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kapcsolat">
+  <div class="container">
+    <div class="section-head">
+      <h2>Kapcsolat</h2>
+      <p>Kérdése van, vagy ajánlatot kérne? Keressen bizalommal!</p>
+    </div>
+    <div class="contact-grid">
+      <ul class="contact-list">
+        <!-- PLACEHOLDER ADATOK — élesítés előtt cserélni! -->
+        <li>
+          <span class="ci">📞</span>
+          <div><b>Telefon</b><a href="tel:+36301234567">+36 30 123 4567</a></div>
+        </li>
+        <li>
+          <span class="ci">✉️</span>
+          <div><b>E-mail</b><a href="mailto:info@gondamonika.hu">info@gondamonika.hu</a></div>
+        </li>
+        <li>
+          <span class="ci">📍</span>
+          <div><b>Iroda</b><span>1000 Budapest, Minta utca 1. <em>(placeholder)</em></span></div>
+        </li>
+        <li>
+          <span class="ci">🕘</span>
+          <div><b>Elérhetőség</b><span>Hétfő–péntek, 9:00–17:00</span></div>
+        </li>
+      </ul>
+      <div class="contact-note">
+        <h3>Ajánlatkérés</h3>
+        <p>Írja meg röviden, milyen vállalkozásról van szó (cégforma, kb. bizonylatszám,
+          alkalmazottak száma), és 24 órán belül válaszolok személyre szabott ajánlattal.</p>
+        <a class="btn" href="mailto:info@gondamonika.hu?subject=Ajánlatkérés%20—%20gondamonika.hu">
+          Ajánlatot kérek e-mailben
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot">
+    <span>© <span id="ev">2026</span> Gonda Monika — Könyvelés és bérszámfejtés</span>
+    <span><a href="#szolgaltatasok">Szolgáltatások</a> · <a href="#kapcsolat">Kapcsolat</a></span>
+  </div>
+  <script>document.getElementById('ev').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
