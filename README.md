@@ -21,6 +21,12 @@ fájlja tartalmazza), az „Enforce HTTPS" a tanúsítvány kiállítása után 
 
 ## Teendők élesítés előtt
 
-- [ ] Placeholder elérhetőségek cseréje (telefon, e-mail, cím) az `index.html`-ben
-- [ ] Portréfotó a Rólam szekcióba
+- [ ] Placeholder elérhetőségek cseréje (telefon, e-mail, cím) az `index.html`-ben + JSON-LD-ben
+- [ ] Portréfotó a Rólam szekcióba (`gondamonika-portre.jpg`)
 - [ ] Statisztikák (év tapasztalat, ügyfélszám) valós adatokra igazítása
+- [ ] Árak szekció: minta-havidíjak valós díjakra cserélése (vagy árak elrejtése)
+- [ ] Vélemények: minta-idézetek valós ügyfél-visszajelzésekre cserélése
+- [ ] `adatvedelem.html` véglegesítése (adatkezelő adatai, adószám, nyilvántartási szám)
+- [ ] `info@gondamonika.hu` postafiók létrehozása (Rackhost) + SPF/DKIM/MX rekordok
+- [ ] DNS-rekordok felvitele a Rackhostnál (fenti táblázat), utána Enforce HTTPS a GitHub-on
+- [ ] Google Search Console felvétel + sitemap beküldés; Google Cégprofil (Business Profile)
