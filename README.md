@@ -28,8 +28,9 @@ fájlja tartalmazza), az „Enforce HTTPS" a tanúsítvány kiállítása után 
 - [x] Blog: 3 SEO-cikk a `blog/` alatt, sitemap bővítve (2026-08-24)
 - [x] DNS-rekordok felvíve a Rackhostnál (2026-08-24)
 - [ ] Portréfotó a Rólam szekcióba (`gondamonika-portre.jpg`)
-- [ ] `konyveles@gondamonika.hu` postafiók létrehozása + MX/SPF rekordok (leírás lent)
-- [ ] Enforce HTTPS bekapcsolása a GitHub Pages-en, ha a DNS-check lefutott
+- [ ] Levelezés: `konyveles@` → átirányítás közvetlenül Mónika Gmailjébe (MX + SPF/DKIM/DMARC a dns24 zónában) — Mónikával közösen állítjuk be
+- [x] DNS-delegálás rendben, domain újramentve a Pages-en → cert-kiadás folyamatban (2026-08-27)
+- [ ] Enforce HTTPS pipa bekapcsolása a GitHub Pages-en, amint a cert kiadódott
 - [ ] Google Search Console felvétel + sitemap beküldés; Google Cégprofil (Business Profile)
 - [ ] Vélemény-szövegek jóváhagyatása a nevesített személyekkel (Yilmaz A., Szabó L., Galgóczi A.)
 
@@ -42,5 +43,5 @@ A weboldal a GitHub-on van, a levelezéshez KÜLÖN e-mail szolgáltatás kell:
 2. A DNS-zónába (ugyanott, ahol az A-rekordok vannak) a Rackhost által megadott
    **MX rekord(ok)** + **SPF TXT** rekord felvétele. (Rackhost tárhelynél ezeket
    gyakran automatikusan felajánlja/beszúrja a szolgáltatás aktiválásakor.)
-3. Alternatíva fiók nélkül: e-mail *átirányítás* a gm.konyvelo@gmail.com címre,
+3. **Választott megoldás:** e-mail *átirányítás* közvetlenül Mónika saját Gmail-címére,
    és a Gmailben „Küldés másként" beállítása a konyveles@ címmel.
