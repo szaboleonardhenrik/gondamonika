@@ -32,7 +32,7 @@ fájlja tartalmazza), az „Enforce HTTPS" a tanúsítvány kiállítása után 
 - [x] Mónika 08-27-i szövegei átvezetve minden blokkba; „15+ év" → „közel 10 év"; kutyabarát említés (2026-08-28)
 - [ ] Levelezés: `konyveles@` → átirányítás közvetlenül Mónika Gmailjébe (MX + SPF/DKIM/DMARC a dns24 zónában) — Mónikával közösen állítjuk be
 - [x] DNS-delegálás rendben, domain újramentve a Pages-en → cert-kiadás folyamatban (2026-08-27)
-- [ ] Enforce HTTPS pipa bekapcsolása a GitHub Pages-en, amint a cert kiadódott
+- [x] Cert kiadva, Enforce HTTPS bekapcsolva — HTTP → HTTPS 301 (2026-08-28)
 - [ ] Google Search Console felvétel + sitemap beküldés; Google Cégprofil (Business Profile)
 - [ ] Vélemény-szövegek jóváhagyatása a nevesített személyekkel (Yilmaz A., Szabó L., Galgóczi A.)
 
