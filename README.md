@@ -27,7 +27,9 @@ fájlja tartalmazza), az „Enforce HTTPS" a tanúsítvány kiállítása után 
 - [x] `adatvedelem.html` kitöltve a hivatalos EV-adatokkal (2026-08-24)
 - [x] Blog: 3 SEO-cikk a `blog/` alatt, sitemap bővítve (2026-08-24)
 - [x] DNS-rekordok felvíve a Rackhostnál (2026-08-24)
-- [ ] Portréfotó a Rólam szekcióba (`gondamonika-portre.jpg`)
+- [ ] Fotó a Rólam szekcióba: Mónika + Luna közös képe (`gondamonika-portre.jpg` néven a repó gyökerébe) — Mónika küldi
+- [x] Mónika saját logója (`logo.png`, `logo-mark.png`) + a logó színpalettája (olíva / bronz / krém) az egész oldalon (2026-08-28)
+- [x] Mónika 08-27-i szövegei átvezetve minden blokkba; „15+ év" → „közel 10 év"; kutyabarát említés (2026-08-28)
 - [ ] Levelezés: `konyveles@` → átirányítás közvetlenül Mónika Gmailjébe (MX + SPF/DKIM/DMARC a dns24 zónában) — Mónikával közösen állítjuk be
 - [x] DNS-delegálás rendben, domain újramentve a Pages-en → cert-kiadás folyamatban (2026-08-27)
 - [ ] Enforce HTTPS pipa bekapcsolása a GitHub Pages-en, amint a cert kiadódott
