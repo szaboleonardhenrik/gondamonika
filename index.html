@@ -181,33 +181,27 @@
     .hero-trust svg { color: var(--gold); flex-shrink: 0; }
 
     /* Hero — lebegő kártyák */
-    .hero-visual { position: relative; min-height: 430px; }
+    .hero-visual { position: relative; display: grid; gap: 14px; }
     .hv-main {
-      position: absolute; inset: 0 24px 30px 0;
       background: #fff; border: 1px solid var(--line);
       border-radius: 24px; box-shadow: var(--shadow-lg);
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 34px 30px 30px; overflow: hidden;
+      text-align: center; padding: 34px 30px 30px; overflow: hidden;
     }
-    .hv-main img { width: 68%; max-width: 300px; height: auto; margin: 0 auto auto; display: block; }
+    .hv-main img { width: 70%; max-width: 320px; height: auto; margin: 0 auto 18px; display: block; }
+    .hv-floats { display: grid; gap: 10px; }
     .hv-main h3 { color: var(--forest-900); font-size: 21px; margin-bottom: 6px; }
     .hv-main p { color: var(--ink-soft); font-size: 14px; }
     .float {
-      position: absolute; background: #fff; border-radius: 15px; padding: 14px 18px;
+      background: #fff; border-radius: 15px; padding: 12px 14px;
       box-shadow: var(--shadow-sm); border: 1px solid var(--line);
-      display: flex; align-items: center; gap: 12px; font-size: 13.5px;
-      animation: floaty 5.5s ease-in-out infinite;
+      display: flex; align-items: center; gap: 10px; font-size: 13px; min-width: 0;
     }
-    .float b { display: block; font-size: 13.5px; }
-    .float span { color: var(--ink-faint); font-size: 12px; }
-    .float .dot { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; font-size: 17px; flex-shrink: 0; }
-    .f1 { top: 26px; right: -6px; animation-delay: 0s; }
+    .float b { display: block; font-size: 13px; }
+    .float span { color: var(--ink-faint); font-size: 11.5px; display: block; }
+    .float .dot { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font-size: 16px; flex-shrink: 0; }
     .f1 .dot { background: var(--forest-100); }
-    .f2 { top: 45%; left: -26px; animation-delay: 1.4s; }
     .f2 .dot { background: #fdf3d7; }
-    .f3 { bottom: -4px; right: 34px; animation-delay: 2.8s; }
     .f3 .dot { background: #e8eefc; }
-    @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
     /* ── Marquee sáv ─────────────────────────────── */
     .marquee { background: var(--forest-950); padding: 16px 0; overflow: hidden; }
@@ -496,7 +490,6 @@
       .plan.hot { order: -1; }
       .about-badge { left: 10px; }
       .about-photo-wrap::before { display: none; }
-      .f2 { left: -8px; }
     }
   </style>
 </head>
@@ -554,6 +547,7 @@
         <h3>Mindent egy kézben</h3>
         <p>Könyveléstől a bérszámfejtésen át a NAV-ügyintézésig — egyetlen megbízható partnerrel.</p>
       </div>
+      <div class="hv-floats">
       <div class="float f1">
         <span class="dot">✅</span>
         <div><b>Havi zárás kész</b><span>bevallások beadva határidőre</span></div>
@@ -565,6 +559,7 @@
       <div class="float f3">
         <span class="dot">📊</span>
         <div><b>Havi riport</b><span>eredmény és adóelőrejelzés</span></div>
+      </div>
       </div>
     </div>
   </div>
